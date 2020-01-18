@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Crash Course | Selectors</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <style>
+  body{
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: lightgray;
+    line-height: 1.5em;
+  }
+  header{
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px black solid;
+    margin-bottom: 10px;
+  }
+  #container{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>jQuery Crash Course | Selectors</h1>
+  </header>
+  <div id="container">
+    <h1 id="heading1">Heading One</h1>
+    <p id="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, perspiciatis. Aut, ut similique autem incidunt nam reiciendis dolorum repellat nesciunt, magni dolorem <span>earum nemo error accusamus natus</span> laborum at, perferendis voluptatem culpa corporis quos? Sit, culpa vero quos dolore dolor esse beatae perspiciatis consequatur sequi quis. Iste, velit aspernatur.</p>
+
+    <h1 class="heading2">Heading Two</h1>
+    <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, perspiciatis. Aut, ut similique autem incidunt nam reiciendis dolorum repellat nesciunt, magni dolorem <span>earum nemo error accusamus natus</span> laborum at, perferendis voluptatem culpa corporis quos? Sit, culpa vero quos dolore dolor esse beatae perspiciatis consequatur sequi quis. Iste, velit aspernatur.</p>
+
+    <ul id="list">
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ul>
+
+    <input type="button" value="Button 1">
+    <input type="submit" value="Submit">
+    <input type="text">
+
+    <a href="http://google.com">Google</a>
+    <a href="http://yahoo.com">Yahoo</a>
+
+  </div>
+
+
+  <script>
+    // $('h1').hide();
+    // $('h1#heading1').hide();
+    // $('h1.heading2').hide();
+    // $('.heading2').hide();
+
+    // $('p span').css('color', 'red')
+    // $('span').css('color', 'green')
+
+    $('ul#list li:first').css('color', 'red')
+    $('ul#list li:last').css('color', 'green')
+    $('ul#list li:even').css('background-color','yellow')
+    $('ul#list li:odd').css('background-color', 'grey')
+    $('ul#list li:nth-child(3n)').css('list-style', 'none')
+
+    // based on input type 
+    // $(':button').hide()
+    // $(':submit').hide()
+    $(':text').hide()
+
+    // attributes & attribute values as selectors
+    $('[href]').css('color', 'red')
+    $('a[href="http://yahoo.com"]').css('color', 'green')
+
+    // for everything *
+    // $('*').hide()
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+What is jQuery?
+- jQuery is a small, fast & feature-rich JS library
+- makes DOM manipulation, event handling & AJAX much easier
+- much less code
+
+Agenda
+Selectors
+Events
+DOM manipulation
+Methods
+Effects & Animation
+Ajax
+
+CDN
+npm install jquery
+
+As on dec, 2019 3.4.1
+https://code.jquery.com/jquery-3.4.1.min.js
+
+Selectors:- $('').method()
+
+We can work with attributes as Selectors
+
+Events:
+NOTE:- if JS (script) is written/ placed above html, then some parts will NOT work properly
+as the script runs even before the page is fully loaded (as needed)
+So in the case of jQuery, in order to prevent to this use,
+
+$(document).ready(function(){
+  //place code here
+})
+
+Here it says, don't run the code within until document is ready (loaded)
+But in general using,
+$(document).ready(function(){
+
+})
+anywhere will be helpful
+
+hover is a short hand syntax for mouse enter + mouse leave
+
+focus event - clicking on an input, seting off a focus
+this - keyword.. to set the context of the particular clicked field
+
+blur event - opposite of focus
+
+
+DOM manipulation:
+Document Object Model
+We can add and remove classes
+
+Also we can toggle classes
+
+Adding and changing content from within the DOM
+
+append
+prepend
+
+.empty()
+.detach() - to detach an element from the DOM
+
+We can also work with attributes
+we can set & get attribute values using 'attr'
+Also, $('').removeAttr('')
+
+wrap - wraps specific elements in other elements
+
+NOTE: multiple css props/values - within object as key: value pairs
+
+Arrays
+to loop thru' an array, use 'each' loop
+also, toArray() - to turn existing list into an array
+
+
+Effects & Animation
+fadeOut, fadeIn, SlideUp, SlideDown
+animate functions
+
+$('').fadeOut('fast')
+$('').fadeOut('slow')
+$('').fadeOut(3000)
+$('').fadeOut(3000, function(){
+
+})
+This CBF is optional, that do something when its done
+
+similarly, slideUp, slideDown, slideToggle
+
+$('').animate({ key: value })
+
+queue - to do multiple animations at once
+
+
+AJAX
+Async JS & XML
+updating of UI/ data, server req without refreshing the page
+fetch JSON
+
+.load('file.html', function(){
+
+})
+
+.get()
+
+In $.ajax({}), the default method is GET
+
+Also $.map()
+
+
+
